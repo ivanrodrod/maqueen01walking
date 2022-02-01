@@ -1,9 +1,13 @@
 basic.forever(function () {
     basic.showIcon(IconNames.Heart)
     maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 120)
+    maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOn)
+    maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOff)
     basic.pause(1000)
     basic.showIcon(IconNames.SmallHeart)
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 50)
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
     basic.pause(300)
+    maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff)
+    maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOn)
 })
